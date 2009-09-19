@@ -1,0 +1,26 @@
+#summary Links to important resources for the ION Competition.
+
+=The Competition Website=
+
+[http://www.ion.org/satdiv/alc/index.cfm|Main Page]
+[http://www.ion.org/satdiv/alc/rules2009.pdf|Rules]
+[http://www.ion.org/satdiv/alc/reports2009.cfm|2009 Team Reports]
+
+=Programming=
+
+[http://python.org/|Python]
+[http://wiki.python.org/moin/BeginnersGuide|Python Beginners Guide]
+[http://docs.python.org/reference/index.html|Python Language Reference]
+[http://docs.python.org/library/|Python Standard Library]
+
+[http://pyrorobotics.org/|PyRobotics]
+[]
+
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
