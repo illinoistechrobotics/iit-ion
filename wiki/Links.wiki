@@ -22,4 +22,5 @@
 =Arduino=
 
   * [http://www.arduino.cc/ Arduino Main Page]
-  * Someone should add more links...
+  * [http://arduino.cc/en/Main/Software Software]
+  * [http://arduino.cc/en/Main/Hardware Hardware]
