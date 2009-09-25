@@ -14,7 +14,7 @@
   * [http://docs.python.org/reference/index.html Python Language Reference]
   * [http://docs.python.org/library/ Python Standard Library]
   * [http://diveintopython.org/ Dive Into Python (Free Book)]
-
+  * [http://subclipse.tigris.org/ Subclipse (Subversion Eclipse Plugin)]
   * [http://pyrorobotics.org/ PyRobotics]
   * [http://opencv.willowgarage.com/wiki/ OpenCV]
   * [http://www.cs.iit.edu/~agam/cs512/lect-notes/opencv-intro/index.html Prof. Agam's OpenCV Guide]
