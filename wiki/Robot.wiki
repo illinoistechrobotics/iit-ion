@@ -1,0 +1,4 @@
+#summary Robot details
+
+==Robot Details==
+Blade: 21.5" Wide
