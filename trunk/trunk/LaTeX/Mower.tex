@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}%might want to switch document class to report
+\title{Puma}
+\author{Illinois Institute of Technology\\
+3300 S. Federal St.\\
+Chicago, IL 60616\\
+USA}
+%-----------------------------------------------------------------------------
+% Include packages
+\usepackage{graphicx}
+\usepackage{psfrag,color}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{booktabs, colortbl}
+\usepackage{array, longtable}
+%----------------------------------------------------------------------------------
+% Begin Definitions
+\newcommand{\dif}{\mathrm{d}}
+\renewcommand{\abstractname}{Executive Summary}
+%------------------------------------------------------------------------------------------
+% Begin Document
+\makeindex
+\begin{document}
+
+\maketitle
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=8cm]{logo.jpg}
+    \end{center}
+\end{figure}
+\pagebreak
+
+\begin{abstract}
+    Mowin' the lawn.
+\end{abstract}
+
+\pagebreak
+\tableofcontents
+\listoffigures
+\listoftables
+\pagebreak
+%-------------------------------------------------------------------------------
+\section{Introduction}
+    
+\section{Lawnmower Design}
+    
+\section{Electrical}
+    
+\section{Cost}
+    \addcontentsline{lot}{figure}{Cost}%keep on same page as chart
+    \begin{longtable}[p]{l||c|rr|rr}
+        %needs batteries on list: http://spreadsheets.google.com/ccc?key=p9sILdZVCFeX9PNoAOwhUJQ&hl=en
+        %needs fix'd usually means needs more specific
+        %Should the safety devices for the lab be on the list?
+        \toprule
+        \multicolumn{1}{l||}{\multirow{2}{*}{\textbf{Item Name}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Qty}}} & \multicolumn{2}{c|}{\multirow{2}{*}{\textbf{Total}}} & \multicolumn{2}{c}{\textbf{Retail}}\\
+        \multicolumn{1}{l||}{} & \multicolumn{1}{c|}{} & \multicolumn{2}{c|}{} & \multicolumn{2}{c}{\textbf{Total}}\\
+        \midrule
+        \endhead
+        Arduino                      & 2 & \$ &   78.51 & \$ &   78.51\\
+        Bolts 95373A146              & 1 & \$ &   10.62 & \$ &   10.62\\%needs fix'd
+        Cameras                      & 2 & \$ &   62.00 & \$ &   62.00\\%needs fix'd
+        Caster Wheels 2399T4         & 2 & \$ &   46.72 & \$ &   46.72\\
+        Center punch 3417A3          & 1 & \$ &    4.68 & \$ &    4.68\\
+        Compass                      & 1 & \$ &   84.95 & \$ &   84.95\\
+        ION Competition Registration & 1 & \$ &  200.00 & \$ &  200.00\\
+        Computer                     & 1 & \$ &  650.00 & \$ &  650.00\\%needs fix'd
+        Craftsman Push Mower         & 1 & \$ &    0.00 & \$ &  214.99\\
+        Cutoff Wheel 45615A36        & 2 & \$ &    4.34 & \$ &    4.34\\
+        Drive Motors                 & 2 & \$ &  421.95 & \$ &  421.95\\
+        Ear plugs 6207T57            & 1 & \$ &   31.32 & \$ &   31.32\\%should this be on the list?
+        Emergency Stop               & 2 & \$ &   89.66 & \$ &   89.66\\
+        First Aid Kit 5533T12        & 1 & \$ &   30.62 & \$ &   30.62\\%should this be on the list?
+        Gloves 6077T71               & 5 & \$ &   20.70 & \$ &   20.70\\%should this be on the list?
+        Inertial Sensor              & 1 & \$ &  113.46 & \$ &  113.46\\
+        Motor Oil 1350K15            & 2 & \$ &    9.16 & \$ &    9.16\\
+        PIC 18F2550                  & 3 & \$ &   39.73 & \$ &   39.73\\
+        Programmer                   & 1 & \$ &  114.00 & \$ &  114.00\\%needs fix'd
+        Rotary Divider Kits          & 2 & \$ &   20.00 & \$ &   20.00\\
+        Rotary Encoders              & 2 & \$ &   79.00 & \$ &   79.00\\
+        SICK Laser Range Finder      & 1 & \$ &  937.37 & \$ & 5000.00\\
+        Sonar Sensors                & 5 & \$ &  141.32 & \$ &  169.81\\
+        Tires                        & 2 & \$ &   26.59 & \$ &   26.59\\%needs fix'd
+        Victor 883                   & 4 & \$ &  563.20 & \$ &  563.20\\
+        Wheel Bushings               & 2 & \$ &   19.02 & \$ &   19.02\\
+        Wire 8073K631                & 3 & \$ &   35.94 & \$ &   35.94\\
+        Numbered Tape                & 1 & \$ &   14.41 & \$ &   14.41\\
+        USB to Serial Adapter        & 1 & \$ &    8.99 & \$ &    8.99\\
+        Battery Selector             & 1 & \$ &   34.56 & \$ &   34.56\\
+        DIP Socket                   & 1 & \$ &    1.62 & \$ &    1.62\\
+        Circuit Components           & - & \$ &   22.26 & \$ &   22.26\\
+        Battery Connectors           & 1 & \$ &   30.00 & \$ &   30.00\\%needs fix'd
+        Battery Connectors           & 1 & \$ &   29.07 & \$ &   29.07\\%needs fix'd
+        Screws                       & 1 & \$ &   17.65 & \$ &   17.65\\%needs fix'd
+        Bondo                        & 1 & \$ &    8.06 & \$ &    8.06\\
+        Tap Set                      & 1 & \$ &   92.61 & \$ &   92.61\\
+        Grinder Wheels               & 2 & \$ &   29.80 & \$ &   29.80\\
+        $^3/_8$ Bolts                & 6 & \$ &   31.68 & \$ &   31.68\\
+        Random bolts and Shipping    & - & \$ &   51.68 & \$ &   51.68\\%needs fix'd
+        \midrule
+        \textbf{Total} & \textbf{-} & \textbf{\$} & \textbf{4207.26} & \textbf{\$} & \textbf{8513.37}\\
+        \bottomrule
+    \end{longtable}
+
+\section{Pictures}%should be deleted in final product. move the pics around as needed
+
+    \begin{figure}[h]
+        \begin{center}
+            \includegraphics[width=8cm]{pc130042jn1.jpg}
+        \end{center}
+        \caption{Rough}
+        \label{figure:Rough}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+            \includegraphics[width=8cm]{Ion_Chassis.jpg}
+        \end{center}
+        \caption{Ion Chassis}
+        \label{figure:Chassis}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+            \includegraphics[width=8cm]{ION_and_Cooler.jpg}
+        \end{center}
+        \caption{Lawnmower with Cooler}
+        \label{figure:wcooler}
+    \end{figure}
+
+\begin{thebibliography}{9}
+
+\bibitem{sonardoc}%not an actual bibitem
+  Leslie Lamport,
+  \emph{\LaTeX: A Document Preparation System}.
+  Addison Wesley, Massachusetts,
+  2nd Edition,
+  1994.
+\end{thebibliography}
+
+\section{Acknowledgements}
+    
+    
+\end{document}
