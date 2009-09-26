@@ -14,6 +14,11 @@
   * [http://docs.python.org/reference/index.html Python Language Reference]
   * [http://docs.python.org/library/ Python Standard Library]
   * [http://diveintopython.org/ Dive Into Python (Free Book)]
+
+  * [http://eclipse.org/ Eclipse]
+  * [http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/galileo/SR1/eclipse-java-galileo-SR1-win32.zip Eclipse Windows Download]
+  * [http://subclipse.tigris.org/update_1.6.x Subclipse Update Link] (Paste this into Eclipse Update Manager)
+  * [http://pydev.org/updates PyDev Update Link] (Paste this too into Eclipse Update Manager)
   * [http://subclipse.tigris.org/ Subclipse (Subversion Eclipse Plugin)]
   * [http://pyrorobotics.org/ PyRobotics]
   * [http://opencv.willowgarage.com/wiki/ OpenCV]
