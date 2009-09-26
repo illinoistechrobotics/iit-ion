@@ -1,5 +1,7 @@
 #summary Links to important resources for the ION Competition.
 
+  * [http://docs.google.com/Doc?docid=0AeuZXPRJZ1rOZGhuNjNiaHZfNzQ0c3A1ZmY5&hl=en ION Log]
+
 =The Competition Website=
 
   * [http://www.ion.org/satdiv/alc/index.cfm Main Page]
