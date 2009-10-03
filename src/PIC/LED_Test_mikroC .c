@@ -2,6 +2,7 @@
 mikroC Version
 PIC 18F2250
 Test LED blinking 10/2/09
+Project configured for 48MHz
 */
 
 void main() {
