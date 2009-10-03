@@ -2,8 +2,6 @@
 A pyrobotics simulation of the ION 2008 playing field.
 """
 
-#another test of subversion
-
 from pyrobot.simulators.pysim import *
 from math import pi
 import random
@@ -35,7 +33,7 @@ def INIT():
 
 	#Instantiate the robot
 	#port,name,x,y,th,bounding X, bounding Y, color:
-	sim.addRobot(60000,TkPioneer("Mower",2.5, -2.5, math.pi,((.225,.225,-.225,-.225),(.175,-.175,-.175,.175))))
+	sim.addRobot(60000,TkPioneer("Mower",2.5, -11.5, -math.pi/2,((.225,.225,-.225,-.225),(.175,-.175,-.175,.175))))
 
 	#Instantiate the robot's sensor capability
 	#For ease of programming, we will simulate the robot's ability using PioneerFrontSonars(). This gives decent coverage of the area that we actually will be able to sense, if we ignore the sensors perpendicular to the front.
