@@ -17,6 +17,7 @@
   * [http://docs.python.org/library/ Python Standard Library]
   * [http://diveintopython.org/ Dive Into Python (Free Book)]
 
+  * [http://blog.msbbc.co.uk/2007/06/using-googles-free-svn-repository-with.html Eclipse/Google Code Tutorial]
   * [http://eclipse.org/ Eclipse]
   * [http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/galileo/SR1/eclipse-java-galileo-SR1-win32.zip Eclipse Windows Download]
   * [http://subclipse.tigris.org/update_1.6.x Subclipse Update Link] (Paste this into Eclipse Update Manager)
