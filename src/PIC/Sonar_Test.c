@@ -1,4 +1,3 @@
-
 /*
  * Sonar Test Code
  * Christopher Jones
@@ -23,7 +22,7 @@ void main(){
          for(i=0;i<4;i++)	//loop on sonar device number, 4 devices total
          {
               PORTB = 0b00000001<<i;	//set the PORTB output pin for the desired sonar
-              while(PORTBbits.RB4 != 1 && count[i] <= timeout)		//wait for the sonar to send a reply signal - might want to include a timeout failsafe
+              while(PORTBbits.RB4 != 1 || count[i] <= timeout)		//wait for the sonar to send a reply signal - might want to include a timeout failsafe
                   {
                   count[i]++;	//increment the sonar count
                   }
