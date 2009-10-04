@@ -26,6 +26,7 @@ void main(){
                   {
                   count[i]++;	//increment the sonar count
                   }
+              PORTB = 0;
          }
 	 printf("\nCount 1: %d\t2: %d\t3: %d\t4:%d",count[0],count[1],count[2],count[3]); //print the outputs after each acquisition
      }
