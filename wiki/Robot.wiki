@@ -35,3 +35,11 @@ Power: Electric
 
 Original Specs:
 http://www.craftsman.com/shc/s/p_10155_12602_07137016000P?vName=Lawn+%26+Garden&cName=Lawn+Mowers+%26+Tractors&sName=Lawn+Mowers
+
+
+
+Battery/Motor Req
+
+6 Amps
+12 Amp*hours
+120 V
