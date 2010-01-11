@@ -14,7 +14,7 @@ void setup()   {
   // initialize the digital pin as an output:
   pinMode(SOut, OUTPUT);
   
-  // initalize outputs
+  // initialize outputs
   pinMode(SIn, INPUT);
   
   Serial.begin(9600);      // open the serial port at 9600 bps:
