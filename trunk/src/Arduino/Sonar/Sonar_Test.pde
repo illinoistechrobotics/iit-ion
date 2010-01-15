@@ -26,22 +26,23 @@ void setup()   {
 
 void loop()                     
 {
-  digitalWrite(SOut, HIGH);   // set the LED on
-  count += 1;                 // wait for a second
+  Serial.print("\nPing"); 
+  digitalWrite(SOut, HIGH); 	//ping the sonar
+  count += 1;                 	//increment count every cycle to track time
   
   digitalRead(SIn);
   
-  if(SIn == HIGH || count >= timeout)
+  if(SIn == HIGH || count >= timeout)	//wait for a reply from the sonar
       {  
         SIn = LOW;
         //output count
         Serial.print("\nPong: ");
-        Serial.print(count);       // print as an ASCII-encoded decimal - same as "DEC"
+        Serial.print(count);       	//display total count when reply is heard
+        							//add scaling values based on clock frequency to determine actual time
         count = 0; 
- 
- 
+
         digitalWrite(SOut, LOW);
         delay(2); 
-        Serial.print("\nPing");
       }
+      
 }
