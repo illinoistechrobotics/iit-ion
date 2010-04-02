@@ -1,0 +1,24 @@
+C:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\bin\Debug\robotJoystickDriver.exe
+C:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\bin\Debug\robotJoystickDriver.pdb
+C:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\robotJoystickDriver.Form1.resources
+C:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\robotJoystickDriver.Properties.Resources.resources
+C:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\ArduionJoystickSerialDriver.csproj.GenerateResource.Cache
+C:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\robotJoystickDriver.exe
+C:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\robotJoystickDriver.pdb
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\robotJoystickDriver.exe
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\robotJoystickDriver.pdb
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\bin\Debug\robotJoystickDriver.exe
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\bin\Debug\robotJoystickDriver.pdb
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\robotJoystickDriver.Form1.resources
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\robotJoystickDriver.Properties.Resources.resources
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\ArduionJoystickSerialDriver\robotJoystickDriver\obj\Debug\ArduionJoystickSerialDriver.csproj.GenerateResource.Cache
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\IIT Robotics\ArduionJoystickSerialDriverProtocol\robotJoystickDriver\obj\Debug\robotJoystickDriver.exe
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\IIT Robotics\ArduionJoystickSerialDriverProtocol\robotJoystickDriver\obj\Debug\robotJoystickDriver.pdb
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\IIT Robotics\ArduionJoystickSerialDriverProtocol\robotJoystickDriver\bin\Debug\robotJoystickDriver.exe
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\IIT Robotics\ArduionJoystickSerialDriverProtocol\robotJoystickDriver\bin\Debug\robotJoystickDriver.pdb
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\IIT Robotics\ArduionJoystickSerialDriverProtocol\robotJoystickDriver\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\IIT Robotics\ArduionJoystickSerialDriverProtocol\robotJoystickDriver\obj\Debug\robotJoystickDriver.Form1.resources
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\IIT Robotics\ArduionJoystickSerialDriverProtocol\robotJoystickDriver\obj\Debug\robotJoystickDriver.Properties.Resources.resources
+D:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\IIT Robotics\ArduionJoystickSerialDriverProtocol\robotJoystickDriver\obj\Debug\ArduionJoystickSerialDriver.csproj.GenerateResource.Cache
