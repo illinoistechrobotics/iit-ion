@@ -1,0 +1,10 @@
+F:\From PC\Robotic\Robotic\Dore amozeshi\C# -Amozeshi\Csharp_Projects\Projects\robotJoystickDriver\robotJoystickDriver\bin\Release\robotJoystickDriver.exe
+F:\From PC\Robotic\Robotic\Dore amozeshi\C# -Amozeshi\Csharp_Projects\Projects\robotJoystickDriver\robotJoystickDriver\bin\Release\robotJoystickDriver.pdb
+F:\From PC\Robotic\Robotic\Dore amozeshi\C# -Amozeshi\Csharp_Projects\Projects\robotJoystickDriver\robotJoystickDriver\obj\Release\ResolveAssemblyReference.cache
+F:\From PC\Robotic\Robotic\Dore amozeshi\C# -Amozeshi\Csharp_Projects\Projects\robotJoystickDriver\robotJoystickDriver\obj\Release\robotJoystickDriver.Form1.resources
+F:\From PC\Robotic\Robotic\Dore amozeshi\C# -Amozeshi\Csharp_Projects\Projects\robotJoystickDriver\robotJoystickDriver\obj\Release\robotJoystickDriver.Properties.Resources.resources
+F:\From PC\Robotic\Robotic\Dore amozeshi\C# -Amozeshi\Csharp_Projects\Projects\robotJoystickDriver\robotJoystickDriver\obj\Release\robotJoystickDriver.csproj.GenerateResource.Cache
+F:\From PC\Robotic\Robotic\Dore amozeshi\C# -Amozeshi\Csharp_Projects\Projects\robotJoystickDriver\robotJoystickDriver\obj\Release\robotJoystickDriver.exe
+F:\From PC\Robotic\Robotic\Dore amozeshi\C# -Amozeshi\Csharp_Projects\Projects\robotJoystickDriver\robotJoystickDriver\obj\Release\robotJoystickDriver.pdb
+C:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\robotJoystickDriver\robotJoystickDriver\obj\Release\robotJoystickDriver.exe
+C:\Documents and Settings\PM\My Documents\Visual Studio 2008\Projects\robotJoystickDriver\robotJoystickDriver\obj\Release\robotJoystickDriver.pdb
