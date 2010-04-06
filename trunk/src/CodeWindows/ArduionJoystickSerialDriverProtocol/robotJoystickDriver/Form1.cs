@@ -176,11 +176,11 @@ namespace robotJoystickDriver
             byte val = 0;            
             if (LeftStickY <= 32768)
             {
-                val = Convert.ToByte(250 + LeftStickY * (175 - 250) / (32767));
+                val = Convert.ToByte(60 + LeftStickY  * (185 - 60) / (32767));
             }
             else if (LeftStickY > 32768)
             {
-                val = Convert.ToByte(280 + LeftStickY * (60 - 175) / (32767));
+                val = Convert.ToByte(100 + LeftStickY * (65) / (32768));
             }
 
             byte val2 = 0;
