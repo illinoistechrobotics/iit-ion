@@ -1,0 +1,187 @@
+#include <stdio.h>
+#include <termios.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sdl/sdl.h>
+
+struct point
+{
+    int input;
+    int output;
+};
+
+/* These maps are a set of points defining the joystick input / arduino output mapping function.
+   Linear interpolation is done for points not explicitly specified.
+   These points must be sorted by input, and duplicate inputs are not allowed.
+*/
+static point left_map[] =  { {-32768, 250}, {-31744, 250}, { -1024, 185},
+                             {  1024, 185}, { 31744,  60}, { 32767,  60} };
+
+static point right_map[] = { {-32768,  60}, {-31744,  60}, { -1024, 172},
+                             {  1024, 172}, { 31744, 250}, { 32767, 250} };
+
+static const int baud_rate = 9600;
+static const int left_axis = 1;
+static const int right_axis = 3;
+
+static int open_serial_port (const char * port, int baud_rate)
+{
+    int fd = open(port, O_RDWR, 0);
+    if (fd < 0)
+    {
+        printf("Unable to open serial port %s: ", port);
+        perror("");
+        return -1;
+    }
+    
+    termios options;
+    if (tcgetattr(fd, &options))
+    {
+        perror("tcgetattr");
+        close(fd);
+        return -1;
+    }
+    cfsetspeed(&options, baud_rate);
+    if (tcsetattr(fd, TCSAFLUSH, &options))
+    {
+        perror("tcsetattr");
+        close(fd);
+        return -1;
+    }
+    
+    return fd;
+}
+
+static SDL_Joystick * open_joystick ()
+{
+    if (SDL_Init(SDL_INIT_JOYSTICK | SDL_INIT_VIDEO) < 0)
+    {
+        printf("SDL_Init: %s", SDL_GetError());
+        return NULL;
+    }
+
+    int num_joysticks = SDL_NumJoysticks();
+    if (num_joysticks == 0)
+    {
+        printf("No joysticks found\n");
+        return NULL;
+    }
+    printf("%d joystick(s) found\n", num_joysticks);
+    printf("Using joystick \"%s\"\n", SDL_JoystickName(0));
+
+    SDL_Joystick * joystick = SDL_JoystickOpen(0);
+    if (!joystick)
+    {
+        printf("SDL_JoystickOpen: %s", SDL_GetError());
+        return NULL;
+    }
+
+    SDL_JoystickEventState(SDL_ENABLE);
+    return joystick;
+}
+
+static int apply_map (int input, const point points[], int num_points)
+{
+    /* Do a binary search to find the 2-point interval */
+    int start = 0;
+    int end = num_points - 1;
+    while (start + 1 != end)
+    {
+        int index = (start + end) / 2;
+        if (input < points[index].input)
+        {
+            end = index;
+        }
+        else
+        {
+            start = index;
+        }
+    }
+    /* Do linear interpolation to determine output */
+    return points[start].output + (points[end].output - points[start].output) * (input - points[start].input)
+                                                                  / (points[end].input - points[start].input);
+};
+
+static int get_input (int input[2])
+{
+    SDL_Event event;
+    while (SDL_PollEvent(&event))
+    {
+        switch (event.type)
+        {
+            case SDL_JOYAXISMOTION:
+                if (event.jaxis.axis == left_axis) 
+                {
+                    input[0] = event.jaxis.value;
+                }
+
+                if (event.jaxis.axis == right_axis) 
+                {
+                    input[1] = event.jaxis.value;
+                }
+                break;
+            
+            case SDL_QUIT:
+                exit(EXIT_SUCCESS);
+                break;
+        }
+    }
+    return 0;
+}
+
+static int send_output (int port_fd, const int output[2])
+{
+    char output_buf[] = { output[0], output[1], 10 };               
+    if (write(port_fd, output_buf, sizeof(output_buf)) < 0)
+    {
+        perror("write");
+        return -1;
+    }
+    return 0;
+}
+
+int SDL_main (int argc, char * argv[])
+{
+    const char * port = NULL;
+    if (argc < 2)
+    {
+        printf("No serial port given; not outputting to serial\n");
+    }
+    else
+    {
+        port = argv[1];
+    }
+
+    int port_fd;
+    if (port)
+    {
+        port_fd = open_serial_port(port, baud_rate);
+        if (port_fd < 0)
+        {
+            return EXIT_FAILURE;
+        }
+    }
+
+    SDL_Joystick * joystick = open_joystick();
+    if (!joystick)
+    {
+        return EXIT_FAILURE;
+    }
+
+    int input[2] = {};
+    int output[2] = {};
+    while (true)
+    {
+        get_input(input);
+
+        output[0] = apply_map(input[0], left_map, sizeof(left_map) / sizeof(left_map[0]));
+        output[1] = apply_map(input[1], right_map, sizeof(right_map) / sizeof(right_map[0]));
+        if (port)
+        {
+            send_output(port_fd, output);
+        }
+        printf("%8d %8d | %8d %8d\r", input[0], input[1], output[0], output[1]);
+
+        usleep(100);
+    }
+}
