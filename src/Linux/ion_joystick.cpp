@@ -3,7 +3,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <sdl/sdl.h>
+#include <SDL/SDL.h>
 
 struct point
 {
@@ -15,17 +15,16 @@ struct point
    Linear interpolation is done for points not explicitly specified.
    These points must be sorted by input, and duplicate inputs are not allowed.
 */
-static point left_map[] =  { {-32768, 250}, {-31744, 250}, { -1024, 185},
-                             {  1024, 185}, { 31744,  60}, { 32767,  60} };
+static point left_map[] =  { {-32768, 250}, {-31744, 250}, { -1024, 190},
+                             {  1024, 190}, { 31744, 130}, { 32767, 130} };
 
-static point right_map[] = { {-32768,  60}, {-31744,  60}, { -1024, 172},
-                             {  1024, 172}, { 31744, 250}, { 32767, 250} };
+static point right_map[] = { {-32768, 250}, {-31744, 250}, { -1024, 190},
+                             {  1024, 190}, { 31744, 130}, { 32767, 130} };
 
-static const int baud_rate = 9600;
 static const int left_axis = 1;
 static const int right_axis = 3;
 
-static int open_serial_port (const char * port, int baud_rate)
+static int open_serial_port (const char * port)
 {
     int fd = open(port, O_RDWR, 0);
     if (fd < 0)
@@ -33,23 +32,7 @@ static int open_serial_port (const char * port, int baud_rate)
         printf("Unable to open serial port %s: ", port);
         perror("");
         return -1;
-    }
-    
-    termios options;
-    if (tcgetattr(fd, &options))
-    {
-        perror("tcgetattr");
-        close(fd);
-        return -1;
-    }
-    cfsetspeed(&options, baud_rate);
-    if (tcsetattr(fd, TCSAFLUSH, &options))
-    {
-        perror("tcsetattr");
-        close(fd);
-        return -1;
-    }
-    
+    }    
     return fd;
 }
 
@@ -141,7 +124,7 @@ static int send_output (int port_fd, const int output[2])
     return 0;
 }
 
-int SDL_main (int argc, char * argv[])
+int main (int argc, char * argv[])
 {
     const char * port = NULL;
     if (argc < 2)
@@ -156,7 +139,7 @@ int SDL_main (int argc, char * argv[])
     int port_fd;
     if (port)
     {
-        port_fd = open_serial_port(port, baud_rate);
+        port_fd = open_serial_port(port);
         if (port_fd < 0)
         {
             return EXIT_FAILURE;
@@ -182,7 +165,7 @@ int SDL_main (int argc, char * argv[])
             send_output(port_fd, output);
         }
         printf("%8d %8d | %8d %8d\r", input[0], input[1], output[0], output[1]);
-
-        usleep(100);
+        fflush(stdout);
+        usleep(8000);
     }
 }
