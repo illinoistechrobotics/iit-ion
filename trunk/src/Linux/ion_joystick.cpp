@@ -2,6 +2,7 @@
 #include <termios.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include <sdl/sdl.h>
 
 struct point
