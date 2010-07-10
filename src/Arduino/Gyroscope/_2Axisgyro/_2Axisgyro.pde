@@ -11,9 +11,9 @@
 //digital:
 //2:AutoZero
 
-const int vrefpin = 0;
-const int xglpin = 2;
-const int xghpin = 3;
+const int vrefpin = 0; //unused
+const int xglpin = 2; //low sensitivity
+const int xghpin = 3; //high sensitivity
 const int yglpin = 4;
 const int yghpin = 5;
 const int resetpin = 2; //digital
@@ -24,19 +24,19 @@ float degxh=0;
 float degyh=0;
 float degxl=0;
 float degyl=0;
-float xgl=0;
+float xgl=0; //read value
 float xgh=0;
 float ygl=0;
 float ygh=0;
-float xglz=0;
+float xglz=0; //zero value
 float xghz=0;
 float yglz=0;
 float yghz=0;
-float xh=0;
+float xh=0; //computed acceleration
 float yh=0;
 float xl=0;
 float yl=0;
-float xtrue=0;
+float xtrue=0; //high low compilation
 float ytrue=0;
 float xtdeg=0;
 float ytdeg=0;
@@ -49,11 +49,11 @@ void setup() {
 
 void loop() {
   
-  if (flag) 
+  if (flag) //first time calibration loop
   {
     
     digitalWrite(resetpin, HIGH);
-    delay(1);
+    delay(1);//max 1.5 ms to reset
     digitalWrite(resetpin, LOW);
     
     int counter = 0;
@@ -65,7 +65,6 @@ void loop() {
       yglz=yglz+analogRead(yglpin);
       
       counter++;
-      delay(10);
     }
     
     xghz=(xghz/counter);
@@ -81,12 +80,12 @@ void loop() {
   ygl = analogRead(yglpin)-yglz;
   ygh = analogRead(yghpin)-yghz;
   
-  xh=(4.9/9.1)*xgh;
+  xh=(4.9/9.1)*xgh;//4.9 for int to mV arduino, 9.1 for mV to deg/sec
   yh=(4.9/9.1)*ygh;
   xl=(4.9/2)*xgl;
   yl=(4.9/2)*ygl;
   
-  if (abs(xh)<1.5)
+  if (abs(xh)<1.5)//basic static noise reduction (dynamic would be better)
   {xh=0;}
   if (abs(yh)<1.5)
   {yh=0;}
@@ -95,14 +94,14 @@ void loop() {
   if (abs(yl)<3)
   {yl=0;}
   
-  if (abs(xh)<90)
+  if (abs(xh)<90)//high low descision
   {xtrue=xh;}
   else {xtrue = xl;}
   if (abs(yh)<90)
   {ytrue=yh;}
   else {ytrue = yl;}
   
-  time=micros()-time;
+  time=micros()-time;//time since last read
   time2=time/1000000;
   
   xtdeg=time2*xtrue+xtdeg;
@@ -113,7 +112,7 @@ void loop() {
   degxl=time2*xl+degxl;
   degyl=time2*yl+degyl;
   
-  time=micros();
+  time=micros(); //reset time
   Serial.print(degxh);
   Serial.print(", ");
   Serial.print(degyh);
