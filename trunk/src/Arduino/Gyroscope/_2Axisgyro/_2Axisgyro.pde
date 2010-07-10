@@ -1,6 +1,16 @@
 //Accelerometer IDG500
 //Tom Lord 7/10/2010.
 
+//pinout
+//analog:
+//0:vref
+//2:xout
+//3:*4.5xout
+//4:yout
+//5:*4.5yout
+//digital:
+//2:AutoZero
+
 const int vrefpin = 0;
 const int xglpin = 2;
 const int xghpin = 3;
