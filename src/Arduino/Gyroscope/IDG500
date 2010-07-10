@@ -1,4 +1,5 @@
-//Accelerometer IDG500
+//Accelerometer IDG500 (arduino code)
+//Tom Lord 7/10/2010
 
 const int vrefpin = 0;
 const int xglpin = 2;
