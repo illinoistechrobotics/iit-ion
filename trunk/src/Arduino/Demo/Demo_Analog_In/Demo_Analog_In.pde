@@ -1,9 +1,8 @@
 // This program is to demonstrate an analog input from a potentiometer
 // Connect pot pins 1 and 3 to +V and GND
 // Connect pin 2 to analog input 0
-
-
-void setup() {  
+  
+void setup() {
   Serial.begin(9600);
 }
 
