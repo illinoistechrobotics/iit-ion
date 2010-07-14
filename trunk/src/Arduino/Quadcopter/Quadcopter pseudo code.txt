@@ -1,0 +1,32 @@
+//This document will outline the programming strategy for the quadcopter deployment
+//7-14-10
+
+
+
+//Read sensors
+
+//Reference frame transformation
+//  rotational matrix to shift pitch and roll axis if desired
+//  this will simplify computation of human controller information
+
+//Input from human controller
+
+//Manual control loops
+//  modify desired kinematic properties based on inputs
+//  these target values will modify the targets for stability control loops	
+
+//Reverse reference frame transformation
+//  un-shift pitch and roll to simplify stability loop outputs
+
+//Stability control loops
+//  based on desired kinematic properties for pitch, roll, yaw, lift
+//	each loop will add to current motor values or desired forces
+//	We may need to have a priority among these and/or a method for synchronizing them so we don't continually increase motor power
+//	Lift may need to be the master, but it has to be done such that it doesn't counter the other loops
+
+
+
+//Motor outputs
+//	based on modified motor targets from above, determine and set motor outputs
+
+
