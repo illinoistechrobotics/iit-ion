@@ -22,6 +22,7 @@
   * [http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/galileo/SR1/eclipse-java-galileo-SR1-win32.zip Eclipse Windows Download]
   * [http://subclipse.tigris.org/update_1.6.x Subclipse Update Link] (Paste this into Eclipse Update Manager)
   * [http://pydev.org/updates PyDev Update Link] (Paste this too into Eclipse Update Manager)
+  * [http://avr-eclipse.sourceforge.net/updatesite/|Arduino PDE Editor Update Link] (Paste this into Update Manager)
   * [http://subclipse.tigris.org/ Subclipse (Subversion Eclipse Plugin)]
   * [http://pyrorobotics.org/ PyRobotics]
   * [http://opencv.willowgarage.com/wiki/ OpenCV]
