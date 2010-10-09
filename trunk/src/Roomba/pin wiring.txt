@@ -1,0 +1,13 @@
+SCI wiring
+
+see http://www.irobot.com/images/consumer/hacker/Roomba_SCI_Spec_Manual.pdf for diagram
+btw i didn't reverse the order
+
+1	orange
+2	--
+3	brown
+4	black
+5	--
+6	--
+7	yellow
+center red
